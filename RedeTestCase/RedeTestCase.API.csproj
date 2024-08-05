@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RedeTestCase.Domain\RedeTestCase.Domain.csproj" />
     <ProjectReference Include="..\RedeTestCase.Infrastructure\RedeTestCase.Infrastructure.csproj" />
   </ItemGroup>

@@ -1,7 +1,7 @@
-﻿using RedeTestCase.API.Mediator.Base;
+﻿using RedeTestCase.API.Application.Mediator.Base;
 using RedeTestCase.Domain.DataAccess.Repositories;
 
-namespace RedeTestCase.API.Features.Queries.JobCategory
+namespace RedeTestCase.API.Application.Features.Queries.JobCategory
 {
     public class GetAllJobsRequestHandler : AbstractRequestHandler<GetAllJobsRequest>
     {

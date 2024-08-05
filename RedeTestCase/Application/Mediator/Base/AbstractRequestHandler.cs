@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace RedeTestCase.API.Mediator.Base
+namespace RedeTestCase.API.Application.Mediator.Base
 {
     public abstract class AbstractRequestHandler<T> : IRequestHandler<T, HandleResponse> where T : IRequest<HandleResponse>
     {
@@ -13,7 +13,7 @@ namespace RedeTestCase.API.Mediator.Base
 
             HandleResponse result = new HandleResponse();
 
-            if (object.Equals(request, default(T)))
+            if (Equals(request, default(T)))
                 return Task.FromResult(result);
 
             try

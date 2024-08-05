@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using RedeTestCase.API.Mediator.Base;
+using RedeTestCase.API.Application.Mediator.Base;
 
-namespace RedeTestCase.API.Features.Queries.Person
+namespace RedeTestCase.API.Application.Features.Queries.Person
 {
     public class GetPersonByEmailRequest : IRequest<HandleResponse>
     {

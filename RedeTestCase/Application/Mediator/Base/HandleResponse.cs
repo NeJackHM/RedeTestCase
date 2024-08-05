@@ -1,4 +1,4 @@
-﻿namespace RedeTestCase.API.Mediator.Base
+﻿namespace RedeTestCase.API.Application.Mediator.Base
 {
     public class HandleResponse
     {

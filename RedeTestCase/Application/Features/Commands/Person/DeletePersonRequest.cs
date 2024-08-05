@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using RedeTestCase.API.Mediator.Base;
+using RedeTestCase.API.Application.Mediator.Base;
 
-namespace RedeTestCase.API.Features.Commands.Person
+namespace RedeTestCase.API.Application.Features.Commands.Person
 {
     public class DeletePersonRequest : IRequest<HandleResponse>
     {

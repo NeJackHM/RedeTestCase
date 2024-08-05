@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using RedeTestCase.API.Features.Commands.Person;
-using RedeTestCase.API.Features.Queries.Person;
+using RedeTestCase.API.Application.Features.Commands.Person;
+using RedeTestCase.API.Application.Features.Queries.Person;
 
 namespace RedeTestCase.API.Controllers
 {

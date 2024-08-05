@@ -1,8 +1,8 @@
-﻿using RedeTestCase.API.Mediator.Base;
+﻿using RedeTestCase.API.Application.Mediator.Base;
 using RedeTestCase.Domain.DataAccess.Repositories;
 using RedeTestCase.Domain.Dtos;
 
-namespace RedeTestCase.API.Features.Queries.Person
+namespace RedeTestCase.API.Application.Features.Queries.Person
 {
     public class GetAllPersonsRequestHandler : AbstractRequestHandler<GetAllPersonsRequest>
     {

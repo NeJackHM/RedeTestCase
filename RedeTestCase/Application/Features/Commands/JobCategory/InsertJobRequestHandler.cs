@@ -1,7 +1,7 @@
-﻿using RedeTestCase.API.Mediator.Base;
+﻿using RedeTestCase.API.Application.Mediator.Base;
 using RedeTestCase.Domain.DataAccess.Repositories;
 
-namespace RedeTestCase.API.Features.Commands.JobCategory
+namespace RedeTestCase.API.Application.Features.Commands.JobCategory
 {
     public class InsertJobRequestHandler : AbstractRequestHandler<InsertJobRequest>
     {

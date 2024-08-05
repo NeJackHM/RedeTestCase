@@ -1,7 +1,7 @@
-﻿using RedeTestCase.API.Mediator.Base;
+﻿using RedeTestCase.API.Application.Mediator.Base;
 using RedeTestCase.Domain.DataAccess.Repositories;
 
-namespace RedeTestCase.API.Features.Commands.Person
+namespace RedeTestCase.API.Application.Features.Commands.Person
 {
     public class DeletePersonRequestHandler : AbstractRequestHandler<DeletePersonRequest>
     {
@@ -15,7 +15,7 @@ namespace RedeTestCase.API.Features.Commands.Person
         internal override HandleResponse HandleIt(DeletePersonRequest request, CancellationToken cancellationToken)
         {
             try
-            {          
+            {
                 var isSuccess = _personRepository.Delete(request.Id);
                 if (isSuccess != 1)
                     return new HandleResponse { Error = "Problema ao deletar registro" };
