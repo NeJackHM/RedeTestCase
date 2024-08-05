@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RedeTestCase.Domain\RedeTestCase.Domain.csproj" />
+    <ProjectReference Include="..\RedeTestCase.Infrastructure\RedeTestCase.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
