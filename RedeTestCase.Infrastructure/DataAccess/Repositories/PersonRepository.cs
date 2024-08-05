@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using RedeTestCase.Domain.DataAccess.Repositories;
+using RedeTestCase.Domain.Dtos;
 using RedeTestCase.Domain.Models;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,14 +17,17 @@ namespace RedeTestCase.Infrastructure.DataAccess.Repositories
             _connection = connection;
         }
 
-        public Person GetByEmail(string email)
+        public GetPersonByEmailResponseDto GetByEmail(string email)
         {
-            var sql = $@"SELECT * FROM Person WHERE Email = '{email}';";
+            var sql = $@"select p.*,jc.Description from Person p inner join JobCategory jc
+                        on p.JobCategoryId = jc.Id
+                        where p.email = '{email}';";
+
             using var connection = new SqlConnection(_connection.ConnectionString);
 
             if (connection.State != ConnectionState.Open)
                 connection.Open();
-            var result = connection.QueryFirst<Person>(sql);
+            var result = connection.QueryFirst<GetPersonByEmailResponseDto>(sql);
 
             if (connection.State == ConnectionState.Open)
                 connection.Close();
@@ -34,7 +38,7 @@ namespace RedeTestCase.Infrastructure.DataAccess.Repositories
         public int Delete(int id)
         {
             var sql = $@"UPDATE[dbo].[Person]
-                               SET[Status] = 0
+                               SET[Active] = 0
                              WHERE Id = @Id;";
 
             using var connection = new SqlConnection(_connection.ConnectionString);
@@ -52,7 +56,7 @@ namespace RedeTestCase.Infrastructure.DataAccess.Repositories
 
         public IEnumerable<Person> GetAll()
         {
-            var sql = $@"SELECT * FROM Person;";
+            var sql = $@"SELECT * FROM Person where Active = 1;";
             using var connection = new SqlConnection(_connection.ConnectionString);
 
             if (connection.State != ConnectionState.Open)

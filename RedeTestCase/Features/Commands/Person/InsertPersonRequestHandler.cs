@@ -1,9 +1,7 @@
-﻿using Microsoft.Win32;
-using RedeTestCase.API.Mediator.Base;
+﻿using RedeTestCase.API.Mediator.Base;
 using RedeTestCase.Domain.DataAccess.Repositories;
-using RedeTestCase.Domain.Models;
 
-namespace RedeTestCase.API.Features.Commands
+namespace RedeTestCase.API.Features.Commands.Person
 {
     public class InsertPersonRequestHandler : AbstractRequestHandler<InsertPersonRequest>
     {
@@ -18,7 +16,7 @@ namespace RedeTestCase.API.Features.Commands
         {
             try
             {
-                var newPerson = new Person()
+                var newPerson = new Domain.Models.Person()
                 {
                     Name = request.Name,
                     BirthDate = request.BirthDate,
@@ -35,15 +33,14 @@ namespace RedeTestCase.API.Features.Commands
 
                 var isSuccess = _personRepository.Insert(newPerson);
                 if (isSuccess != 1)
-                    return new HandleResponse { Content = "Problema ao inserir registro", Error = string.Empty };
+                    return new HandleResponse { Error = "Problema ao inserir registro" };
 
-                return new HandleResponse { Error = "Registro inserido com sucesso" }; 
+                return new HandleResponse { Content = "Registro inserido com sucesso", Error = string.Empty };
             }
             catch (Exception ex)
             {
                 return new HandleResponse { Error = $"Problema ao inserir registro - Message :{ex.Message}" };
             }
-
         }
     }
 }

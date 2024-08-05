@@ -14,6 +14,7 @@ namespace RedeTestCase.API.Extensions
         public static WebApplicationBuilder AddDependencies(this WebApplicationBuilder builder)
         {
             builder.Services.AddTransient<IPersonRepository, PersonRepository>();
+            builder.Services.AddTransient<IJobCategoryRepository, JobCategoryRepository>();
 
             builder.Services.AddTransient<IDbConnection>((sp) =>
             {
