@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedeTestCase.API", "RedeTestCase\RedeTestCase.API.csproj", "{6D1EA509-A6C8-458B-9A3E-91FD286E6B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedeTestCase.API", "RedeTestCase\RedeTestCase.API.csproj", "{6D1EA509-A6C8-458B-9A3E-91FD286E6B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedeTestCase.Domain", "RedeTestCase.Domain\RedeTestCase.Domain.csproj", "{7031ABC0-AD12-4B88-AAFA-5B180633FF48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedeTestCase.Domain", "RedeTestCase.Domain\RedeTestCase.Domain.csproj", "{7031ABC0-AD12-4B88-AAFA-5B180633FF48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedeTestCase.Infrastructure", "RedeTestCase.Infrastructure\RedeTestCase.Infrastructure.csproj", "{1A20524F-49B3-4DD9-8DE0-CD83EB7AF3BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedeTestCase.Infrastructure", "RedeTestCase.Infrastructure\RedeTestCase.Infrastructure.csproj", "{1A20524F-49B3-4DD9-8DE0-CD83EB7AF3BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedeTestCase.Tests", "RedeTestCase.Tests\RedeTestCase.Tests.csproj", "{1BF9DECF-12E0-4D83-B742-6F6FDAB98821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedeTestCase.Tests", "RedeTestCase.Tests\RedeTestCase.Tests.csproj", "{1BF9DECF-12E0-4D83-B742-6F6FDAB98821}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{647CBA09-9395-4088-A82F-FCB8E3D2DC0D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
